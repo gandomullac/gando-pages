@@ -4,7 +4,7 @@ Just a dumb Docker container for your static assets (I use this for my [exported
 
 _I ain't gonna need a VPS for that shi..._
 
-_... but still, I test._
+_... and still, I test._
 
 ## Use cases
 
@@ -21,13 +21,9 @@ _... but still, I test._
 
 1. Clone the repository
 
-2. Build the Docker image:
-   ```bash
-   docker-compose build
-   ```
-3. Copy your website static files to the `./dist` directory in the cloned repository (you'll need to create it).
+2. Copy your website static files to the `./dist` directory in the cloned repository (you'll need to create it).
 
-4. Edit the `.env` file to set the `VIRTUAL_HOST` variable to your domain name.
+3. Edit the `.env` file to set the `VIRTUAL_HOST` variable to your domain name.
 
    Example:
 
@@ -35,11 +31,11 @@ _... but still, I test._
    VIRTUAL_HOST=example.com
    ```
 
-5. IMPORTANT: edit your `hosts` file.
+4. IMPORTANT: edit your `hosts` file.
 
-6. Start the container:
+5. Build and start the container:
    ```bash
-   docker-compose up -d
+   docker compose up -d --build
    ```
 
 ## License
