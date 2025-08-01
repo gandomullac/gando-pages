@@ -34,7 +34,7 @@ server {
     error_log /var/log/nginx/ssl.error.log;
 
     location / {
-        try_files $uri $uri/ /index.html;
+        try_files $uri $uri/ /404/index.html;
     }
 
     location ~* \.(css|js|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$ {
